@@ -17,12 +17,6 @@ public class ReserveCanceled extends AbstractEvent {
     private Date reserveDate;
     private Long movieId;
 
-    public ReserveCanceled(Reserve aggregate) {
-        super(aggregate);
-    }
-
-    public ReserveCanceled() {
-        super();
-    }
+    
 }
 //>>> DDD / Domain Event

@@ -15,9 +15,6 @@
                             <v-list-item-title>
                             </v-list-item-title>
                             <v-list-item-subtitle>
-                                UserId :  {{item.userId }}
-                            </v-list-item-subtitle>
-                            <v-list-item-subtitle>
                                 Date :  {{item.date }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
@@ -77,8 +74,6 @@
                 if(val != undefined) {
                     var arr = this.list[val]._links.self.href.split('/');
                     obj['id'] = arr[4]; 
-                    
-                    
                     
                     
                     

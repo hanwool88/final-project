@@ -44,12 +44,10 @@
                             
                             
                             
-                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
                             [ Id :  {{data.id }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ UserId :  {{data.userId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Date :  {{data.date }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Stock :  {{data.stock }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ MovieName :  {{data.movieName }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -120,7 +118,6 @@
             this.values = temp.data._embedded.movies;
             
             this.newValue = {
-                'userId': '',
                 'date': '2024-07-01',
                 'stock': 0,
                 'movieName': '',

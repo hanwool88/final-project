@@ -6,9 +6,6 @@
 
         <v-card-text>
             <div>
-                <String label="UserId" v-model="item.userId" :editMode="editMode" @change="change" />
-            </div>
-            <div>
                 <Date label="Date" v-model="item.date" :editMode="editMode" @change="change" />
             </div>
             <div>
