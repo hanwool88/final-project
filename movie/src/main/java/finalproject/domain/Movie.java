@@ -52,28 +52,22 @@ public class Movie {
 
     //<<< Clean Arch / Port Method
     public static void decreaseTicket(Reserved reserved) {
-        //implement business logic here:
+        repository().findById(reserved.getMovieId()).ifPresent(movie->{
+            if(movie.getStock() >= reserved.getStock()) {
+                movie.setStock(movie.getStock() - reserved.getStock());
+                repository().save(movie);
 
-        /** Example 1:  new item 
-        Movie movie = new Movie();
-        repository().save(movie);
-
-        TicketDecreased ticketDecreased = new TicketDecreased(movie);
-        ticketDecreased.publishAfterCommit();
-        */
-
-        /** Example 2:  finding and process
-        
-        repository().findById(reserved.get???()).ifPresent(movie->{
-            
-            movie // do something
-            repository().save(movie);
-
-            TicketDecreased ticketDecreased = new TicketDecreased(movie);
-            ticketDecreased.publishAfterCommit();
+                TicketDecreased ticketDecreased = new TicketDecreased(movie);
+                ticketDecreased.publishAfterCommit();
+            }
+            else {
+                OutOfTicket outOfTicket = new OutOfTicket(movie);
+                outOfTicket.setReservedId(reserved.getId());
+                outOfTicket.publishAfterCommit();
+            }
 
          });
-        */
+        
 
     }
 
