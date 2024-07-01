@@ -53,8 +53,8 @@ public class Movie {
     //<<< Clean Arch / Port Method
     public static void decreaseTicket(Reserved reserved) {
         repository().findById(reserved.getMovieId()).ifPresent(movie->{
-            if(movie.getStock() >= reserved.getStock()) {
-                movie.setStock(movie.getStock() - reserved.getStock());
+            if(movie.getStock() >= reserved.getAmount()) {
+                movie.setStock(movie.getStock() - reserved.getAmount());
                 repository().save(movie);
 
                 TicketDecreased ticketDecreased = new TicketDecreased(movie);
@@ -62,7 +62,7 @@ public class Movie {
             }
             else {
                 OutOfTicket outOfTicket = new OutOfTicket(movie);
-                outOfTicket.setReservedId(reserved.getId());
+                outOfTicket.setReserveId(reserved.getId());
                 outOfTicket.publishAfterCommit();
             }
 
