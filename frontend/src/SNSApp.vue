@@ -36,25 +36,25 @@
                 <v-list>
                     <v-list-item
                         class="px-2"
-                        key=""
-                        to="//"
+                        key="reserves"
+                        to="/reserves/reserves"
                         @click="changeUrl()"
                         color="primary"
                         style="font-weight:700;"
                     >
-                        
+                        Reserve
                     </v-list-item>
 
 
                     <v-list-item
                         class="px-2"
-                        key=""
-                        to="//"
+                        key="movies"
+                        to="/movies/movies"
                         @click="changeUrl()"
                         color="primary"
                         style="font-weight:700;"
                     >
-                        
+                        Movie
                     </v-list-item>
 
 
@@ -150,17 +150,17 @@ export default {
         ImageUrl: '',
         aggregate: [
             { 
-                title: '', 
+                title: 'Reserve', 
                 description: '', 
-                key: '', 
-                route: '//',
+                key: 'reserves', 
+                route: '/reserves/reserves',
                 ImageUrl: '',
             },
             { 
-                title: '', 
+                title: 'Movie', 
                 description: '', 
-                key: '', 
-                route: '//',
+                key: 'movies', 
+                route: '/movies/movies',
                 ImageUrl: '',
             },
             { 

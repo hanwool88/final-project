@@ -12,17 +12,17 @@ spring:
         - id: reserve
           uri: http://localhost:8082
           predicates:
-            - Path=/undefined/**, 
+            - Path=/reserves/**, 
         - id: movie
-          uri: http://localhost:0
+          uri: http://localhost:8083
           predicates:
-            - Path=/undefined/**, 
+            - Path=/movies/**, 
         - id: reservelist
-          uri: http://localhost:0
+          uri: http://localhost:8084
           predicates:
             - Path=, 
         - id: notification
-          uri: http://localhost:0
+          uri: http://localhost:8085
           predicates:
             - Path=/notifications/**, 
         - id: frontend
@@ -52,11 +52,11 @@ spring:
         - id: reserve
           uri: http://reserve:8080
           predicates:
-            - Path=/undefined/**, 
+            - Path=/reserves/**, 
         - id: movie
           uri: http://movie:8080
           predicates:
-            - Path=/undefined/**, 
+            - Path=/movies/**, 
         - id: reservelist
           uri: http://reservelist:8080
           predicates:

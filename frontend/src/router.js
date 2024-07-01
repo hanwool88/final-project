@@ -5,11 +5,11 @@ import Router from 'vue-router'
 Vue.use(Router);
 
 
-import Manager from "./components/listers/Cards"
-import Detail from "./components/listers/Detail"
+import ReserveReserveManager from "./components/listers/ReserveReserveCards"
+import ReserveReserveDetail from "./components/listers/ReserveReserveDetail"
 
-import Manager from "./components/listers/Cards"
-import Detail from "./components/listers/Detail"
+import MovieMovieManager from "./components/listers/MovieMovieCards"
+import MovieMovieDetail from "./components/listers/MovieMovieDetail"
 
 
 import NotificationNotificationManager from "./components/listers/NotificationNotificationCards"
@@ -21,25 +21,25 @@ export default new Router({
     base: process.env.BASE_URL,
     routes: [
             {
-                path: '//',
-                name: 'Manager',
-                component: Manager
+                path: '/reserves/reserves',
+                name: 'ReserveReserveManager',
+                component: ReserveReserveManager
             },
             {
-                path: '///:id',
-                name: 'Detail',
-                component: Detail
+                path: '/reserves/reserves/:id',
+                name: 'ReserveReserveDetail',
+                component: ReserveReserveDetail
             },
 
             {
-                path: '//',
-                name: 'Manager',
-                component: Manager
+                path: '/movies/movies',
+                name: 'MovieMovieManager',
+                component: MovieMovieManager
             },
             {
-                path: '///:id',
-                name: 'Detail',
-                component: Detail
+                path: '/movies/movies/:id',
+                name: 'MovieMovieDetail',
+                component: MovieMovieDetail
             },
 
 
