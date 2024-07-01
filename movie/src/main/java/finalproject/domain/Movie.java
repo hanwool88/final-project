@@ -28,6 +28,8 @@ public class Movie {
 
     private Integer stock;
 
+    private String movieName;
+
     @PostPersist
     public void onPostPersist() {
         TicketDecreased ticketDecreased = new TicketDecreased(this);

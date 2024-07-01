@@ -20,6 +20,7 @@
             <Number label="ReserveId" v-model="value.reserveId" :editMode="editMode" :inputUI="''"/>
             <Date label="Date" v-model="value.date" :editMode="editMode" :inputUI="''"/>
             <Number label="Stock" v-model="value.stock" :editMode="editMode" :inputUI="''"/>
+            <String label="MovieName" v-model="value.movieName" :editMode="editMode" :inputUI="''"/>
         </v-card-text>
 
         <v-card-actions>
