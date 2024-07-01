@@ -18,12 +18,6 @@ public class Reserved extends AbstractEvent {
     private Date reserveDate;
     private Long movieId;
 
-    public Reserved(Reserve aggregate) {
-        super(aggregate);
-    }
-
-    public Reserved() {
-        super();
-    }
+    
 }
 //>>> DDD / Domain Event
