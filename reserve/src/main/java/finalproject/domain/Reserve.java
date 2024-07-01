@@ -46,12 +46,12 @@ public class Reserve {
     }
 
     public static void updateStatus(OutOfTicket outOfTicket) {
-        repository().findById(outOfTicket.getReservedId()).ifPresent(reserve ->{
+        repository().findById(outOfTicket.getReserveId()).ifPresent(reserve ->{
             
-            reserve.setStatus("reserveCanceled");
-            repository().save(order);
-    }
+            reserve.setReserveStatus("reserveCancelled");
+            repository().save(reserve);
+        });
 
     }
-}g
+}
 //>>> DDD / Aggregate Root
