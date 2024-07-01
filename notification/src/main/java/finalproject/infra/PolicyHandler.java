@@ -22,33 +22,5 @@ public class PolicyHandler {
 
     @StreamListener(KafkaProcessor.INPUT)
     public void whatever(@Payload String eventString) {}
-
-    @StreamListener(
-        value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='ReserveCanceled'"
-    )
-    public void wheneverReserveCanceled_Notify(
-        @Payload ReserveCanceled reserveCanceled
-    ) {
-        ReserveCanceled event = reserveCanceled;
-        System.out.println(
-            "\n\n##### listener Notify : " + reserveCanceled + "\n\n"
-        );
-
-        // Sample Logic //
-        Notification.notify(event);
-    }
-
-    @StreamListener(
-        value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='Reserved'"
-    )
-    public void wheneverReserved_Notify(@Payload Reserved reserved) {
-        Reserved event = reserved;
-        System.out.println("\n\n##### listener Notify : " + reserved + "\n\n");
-
-        // Sample Logic //
-        Notification.notify(event);
-    }
 }
 //>>> Clean Arch / Inbound Adaptor
