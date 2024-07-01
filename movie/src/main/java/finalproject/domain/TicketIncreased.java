@@ -12,7 +12,6 @@ import lombok.*;
 public class TicketIncreased extends AbstractEvent {
 
     private Long id;
-    private String userId;
     private Date date;
     private Integer stock;
     private String movieName;
