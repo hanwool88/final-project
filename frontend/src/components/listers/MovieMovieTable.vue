@@ -68,7 +68,6 @@
                 [
                     { text: "id", value: "id" },
                     { text: "userId", value: "userId" },
-                    { text: "reserveId", value: "reserveId" },
                     { text: "date", value: "date" },
                     { text: "stock", value: "stock" },
                     { text: "movieName", value: "movieName" },
@@ -90,7 +89,6 @@
 
             this.newValue = {
                 'userId': '',
-                'reserveId': 0,
                 'date': '2024-07-01',
                 'stock': 0,
                 'movieName': '',
