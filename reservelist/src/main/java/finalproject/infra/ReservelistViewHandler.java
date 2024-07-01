@@ -41,15 +41,15 @@ public class ReservelistViewHandler {
 
 
     @StreamListener(KafkaProcessor.INPUT)
-    public void when_then_UPDATE_(@Payload  ) {
+    public void whenReserveCanceled_then_UPDATE_1(@Payload ReserveCanceled reserveCanceled) {
         try {
-            if (!.validate()) return;
+            if (!reserveCanceled.validate()) return;
                 // view 객체 조회
 
-                List<Reservelist> reservelistList = reservelistRepository.findByReserveId(.getId());
+                List<Reservelist> reservelistList = reservelistRepository.findByReserveId(reserveCanceled.getId());
                 for(Reservelist reservelist : reservelistList){
                     // view 객체에 이벤트의 eventDirectValue 를 set 함
-                    reservelist.setReserveStatus(String.valueOf(.getId()));
+                    reservelist.setReserveStatus("reserveCanceled");
                 // view 레파지 토리에 save
                 reservelistRepository.save(reservelist);
                 }

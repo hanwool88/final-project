@@ -34,8 +34,9 @@ public class PolicyHandler {
         System.out.println(
             "\n\n##### listener UpdateStatus : " + outOfTicket + "\n\n"
         );
-        // Sample Logic //
 
+        // Sample Logic //
+        Reserve.updateStatus(event);
     }
 }
 //>>> Clean Arch / Inbound Adaptor
