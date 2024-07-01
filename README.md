@@ -39,7 +39,7 @@ mvn spring-boot:run
 ```
 - movie
 ```
- http :8088/movies id="id" userId="userId" date="date" stock="stock" movieName="movieName" 
+ http :8088/movies id="id" date="date" stock="stock" movieName="movieName" 
 ```
 - reservelist
 ```

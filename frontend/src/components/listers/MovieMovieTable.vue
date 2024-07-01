@@ -67,7 +67,6 @@
             headers: 
                 [
                     { text: "id", value: "id" },
-                    { text: "userId", value: "userId" },
                     { text: "date", value: "date" },
                     { text: "stock", value: "stock" },
                     { text: "movieName", value: "movieName" },
@@ -88,7 +87,6 @@
             this.values = temp.data._embedded.movies;
 
             this.newValue = {
-                'userId': '',
                 'date': '2024-07-01',
                 'stock': 0,
                 'movieName': '',

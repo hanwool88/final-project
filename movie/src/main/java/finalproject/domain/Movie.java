@@ -20,8 +20,6 @@ public class Movie {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String userId;
-
     private Date date;
 
     private Integer stock;
