@@ -9,13 +9,13 @@
                 <String label="UserId" v-model="item.userId" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <Number label="ReserveId" v-model="item.reserveId" :editMode="editMode" @change="change" />
-            </div>
-            <div>
                 <Date label="Date" v-model="item.date" :editMode="editMode" @change="change" />
             </div>
             <div>
                 <Number label="Stock" v-model="item.stock" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <String label="MovieName" v-model="item.movieName" :editMode="editMode" @change="change" />
             </div>
         </v-card-text>
 

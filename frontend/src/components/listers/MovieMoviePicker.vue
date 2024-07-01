@@ -18,13 +18,13 @@
                                 UserId :  {{item.userId }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                ReserveId :  {{item.reserveId }}
-                            </v-list-item-subtitle>
-                            <v-list-item-subtitle>
                                 Date :  {{item.date }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
                                 Stock :  {{item.stock }}
+                            </v-list-item-subtitle>
+                            <v-list-item-subtitle>
+                                MovieName :  {{item.movieName }}
                             </v-list-item-subtitle>
                         </v-list-item-content>
 

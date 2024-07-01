@@ -22,11 +22,11 @@ public class Movie {
 
     private String userId;
 
-    private Long reserveId;
-
     private Date date;
 
     private Integer stock;
+
+    private String movieName;
 
     @PostPersist
     public void onPostPersist() {

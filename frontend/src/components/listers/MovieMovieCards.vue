@@ -110,9 +110,9 @@
             
             me.newValue = {
                 'userId': '',
-                'reserveId': 0,
                 'date': '2024-07-01',
                 'stock': 0,
+                'movieName': '',
             }
         },
         methods:{

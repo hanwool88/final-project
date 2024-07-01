@@ -51,5 +51,7 @@ public class Reserve {
             reserve.setStatus("reserveCanceled");
             repository().save(order);
     }
+
+    }
 }
 //>>> DDD / Aggregate Root
